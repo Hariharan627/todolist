@@ -1,11 +1,11 @@
 FROM node:latest
 
-RUN nkdir/root/app
+RUN mkdir /root/app
 WORKDIR /root/app
 COPY . /root/app
 
-RUN npm install -g  serve
+RUN npm install -g serve
 
-EXPOSE 3080 
+EXPOSE 3080
 
-CMD serve -s build
+CMD serve -s /root/app/build
